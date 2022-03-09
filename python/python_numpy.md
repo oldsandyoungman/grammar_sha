@@ -101,6 +101,17 @@ b[(b<4) & (b>1)] # array([3, 2])
 
 
 
+##### (4) 矩阵倒序输出
+
+```python
+# 行逆序输出
+matrix = matrix[::-1, :]
+# 列逆序输出
+matrix = matrix[:, ::-1]
+```
+
+
+
 
 
 ### 3. 矩阵相乘
@@ -177,6 +188,32 @@ b = np.array(a) # <class 'numpy.ndarray'>
 ```
 
 
+
+
+
+### 8. 设置打印完整程度
+
+```python
+import numpy as np
+np.set_printoptions(threshold=np.inf)
+```
+
+
+
+### 9. 矩阵求逆
+
+```python
+import numpy as np
+
+a  = np.array([[1, 2], [3, 4]])  # 初始化一个非奇异矩阵(数组)
+# 方法一
+print(np.linalg.inv(a))  # 对应于MATLAB中 inv() 函数
+
+# 方法二 矩阵对象可以通过 .I 更方便的求逆
+A = np.matrix(a)
+print(A.I)
+b = np.array(A.I)
+```
 
 
 
