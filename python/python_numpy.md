@@ -217,9 +217,27 @@ b = np.array(A.I)
 
 
 
+### 10. 数组填充
 
+```python
+import numpy as np
 
+# h: 高度上补全的数量
+# w: 宽度上补全的数量
 
+# ‘constant’——表示连续填充相同的值，每个轴可以分别指定填充值，constant_values=（x, y）时前面用x填充，后面用y填充，缺省值填充0
+# ‘edge’——表示用边缘值填充
+# ‘linear_ramp’——表示用边缘递减的方式填充
+# ‘maximum’——表示最大值填充
+# ‘mean’——表示均值填充
+# ‘median’——表示中位数填充
+# ‘minimum’——表示最小值填充
+# ‘reflect’——表示对称填充
+# ‘symmetric’——表示对称填充
+# ‘wrap’——表示用原数组后面的值填充前面，前面的值填充后面
+
+img = np.pad(img, (h, w), 'reflect')
+```
 
 
 
