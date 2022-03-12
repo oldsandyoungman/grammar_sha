@@ -230,7 +230,7 @@ if (1 in d):
 
 ### 10. 画图
 
-##### (1) 注意彩色和灰色参数不一样
+##### (1) 图像/矩阵，注意彩色和灰色参数不一样
 
 ```python
 plt.subplot(121)
@@ -245,6 +245,50 @@ plt.imshow(img_merge, cmap='gray')
 plt.axis('off')
 plt.show()
 ```
+
+
+
+##### (2) 向量/折线
+
+```python
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+
+count = np.zeros((256,), dtype=int)
+plt.plot(count)
+plt.show()
+```
+
+
+
+
+
+
+
+
+
+### 11. 运算符
+
+##### (1) ** 幂运算
+
+```python
+a = 2
+b = 3
+a**b  # 8
+```
+
+
+
+##### (2) / 和 //
+
+```python
+a = 9
+b = 3
+a/b  # 3.0
+a//b  # 3
+```
+
+
 
 
 
